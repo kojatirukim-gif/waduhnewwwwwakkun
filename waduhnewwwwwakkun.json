@@ -139,7 +139,7 @@ _G.FishItConfig = _G.FishItConfig or {
     ["Rod List"] = {
         ["Auto Buying"] = true,
         ["Buy List"] = {
-            "Astral Rod",
+            "Ares Rod",
         },
         ["Location Rods"] = {
             ["Fisherman Island"] = {"Starter Rod"},
@@ -157,4 +157,5 @@ _G.FishItConfig = _G.FishItConfig or {
     ["HideGUI"] = false,
     ["EXIT_MAP_IF_DISCONNECT"] = false,
 }
+
 
