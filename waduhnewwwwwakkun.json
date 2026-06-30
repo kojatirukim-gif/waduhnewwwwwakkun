@@ -65,11 +65,11 @@ _G.FishItConfig = _G.FishItConfig or {
         ["Auto Sell Every"] = 25,
     },
     ["Doing Quest"] = {
-        ["Auto Ghostfinn Rod"] = true,
+        ["Auto Ghostfinn Rod"] = false,
         ["Auto Element Rod"] = false,
-        ["Auto Element Rod 2"] = true,
+        ["Auto Element Rod 2"] = false,
         ["Auto Diamond Rod"] = false,
-        ["Unlock Ancient Ruin"] = true,
+        ["Unlock Ancient Ruin"] = false,
         ["Allowed Sacrifice"] = {
             "Ghost Shark",
             "Cryoshade Glider",
@@ -98,7 +98,7 @@ _G.FishItConfig = _G.FishItConfig or {
     },
 
 ["Enchant"] = {
-    ["Farm Until Enchant"] = true,
+    ["Farm Until Enchant"] = false,
 },
 
 ["Fishing"] = {
@@ -183,7 +183,7 @@ _G.FishItConfig = _G.FishItConfig or {
             ["Fisherman Island"] = {},
             ["Sewers"] = {"Element Rod","Ghostfinn Rod","Starter Rod"},
         },
-        ["Endgame"] = "",
+        ["Endgame"] = "Starter Rod"
     },
 
     ["ExtremeFpsBoost"] = false,
