@@ -9,39 +9,40 @@ _G.FishItConfig = _G.FishItConfig or {
             "Sacred Guardian Squid",
             {Name = "Ruby", Variant = "Gemstone"},
             -- {Variant = "Leviathan Rage"}, -- Variant Only
-            -- {Tier = "Secret", Variant = "Leviathan Rage"},  -- Tier + Variant
+            -- {Tier = "Secret", Variant = "Leviathan Rage"}, -- Tier + Variant
         },
 
         ["Auto Accept Trade"] = true,
         ["Auto Friend Request"] = true,
+        ["Trade Timeout"] = 90,
     },
+
     ["Auto Trade"] = {
         ["Enabled"] = true,
         ["Whitelist Username"] = {
-            
-"Citra1548Lestari",
-"Dimas8206Saputra",
-"Eka4931Wulandari",
-"Fajar6175Nugroho",
-"Gina2847Kusuma",
-"Hadi9360Mahendra",
-"Indah5024Rahayu",
-"Joko1683Santoso",
-"Kartika7419Angg",
-"Leo3952Wijaya",
-"Maya8176Permata2",
-"Nano2604Pradana",
-"Olivia6837Rahmawati",
-"Panji4195Saputra",
-"Qori9528Lestari",
-"Rudi1763Nugraha",
-"Siska5480Kusuma",
-"Tegar8042Pratama",
-"Ulya3617Wijaya",
-"Weni1904Rahayu",
-"Yoga6381Pradana",
-"Zara4726Angg",
- },
+            "Citra1548Lestari",
+            "Dimas8206Saputra",
+            "Eka4931Wulandari",
+            "Fajar6175Nugroho",
+            "Gina2847Kusuma",
+            "Hadi9360Mahendra",
+            "Indah5024Rahayu",
+            "Joko1683Santoso",
+            "Kartika7419Angg",
+            "Leo3952Wijaya",
+            "Maya8176Permata2",
+            "Nano2604Pradana",
+            "Olivia6837Rahmawati",
+            "Panji4195Saputra",
+            "Qori9528Lestari",
+            "Rudi1763Nugraha",
+            "Siska5480Kusuma",
+            "Tegar8042Pratama",
+            "Ulya3617Wijaya",
+            "Weni1904Rahayu",
+            "Yoga6381Pradana",
+            "Zara4726Angg",
+        },
         ["Category Fish"] = {
             "Secret",
             -- {Tier = "Mythic", Variant = "Stone"}, -- Tier + Variant
@@ -52,18 +53,21 @@ _G.FishItConfig = _G.FishItConfig or {
             -- {Variant = "Leviathan Rage"}, -- Variant Only
         },
         ["Item Name"] = {
-            "Evolved Enchant Stone","Runic Enchant Stone",
+            "Evolved Enchant Stone", "Runic Enchant Stone",
         },
     },
+
+    ["Selling"] = {
+        ["Auto Sell"] = true,
+        ["Auto Sell Threshold"] = "Mythic", -- Common/Uncommon/Rare/Epic/Legendary/Mythic/Secret. Sells this tier AND below; favorited/target fish never sold.
+        ["Auto Sell Every"] = 25,
+    },
+
     ["Farm Coin Only"] = {
         ["Enabled"] = false, -- Farm coins only [ cant buy rod, bait, enchant, weather ]
         ["Target"] = 190000,
     },
-    ["Selling"] = {
-        ["Auto Sell"] = true,
-        ["Auto Sell Threshold"] = "Mythic",
-        ["Auto Sell Every"] = 25,
-    },
+
     ["Doing Quest"] = {
         ["Auto Ghostfinn Rod"] = false,
         ["Auto Element Rod"] = false,
@@ -78,7 +82,6 @@ _G.FishItConfig = _G.FishItConfig or {
             "King Crab",
             "Giant Squid",
             "Blob Shark",
-            "Ghost Shark",
             "Gladiator Shark",
             "Elshark Gran Maja",
             "Bone Whale",
@@ -86,25 +89,58 @@ _G.FishItConfig = _G.FishItConfig or {
             "Great Whale",
         },
         ["FARM_LOC_SECRET_SACRIFICE"] = "Ancient Ruin",
-
         ["Minimum Rod"] = "Ares Rod",
     },
-    ["WebHook"] = {
-        ["Link Webhook"] = "https://discord.com/api/webhooks/1453734171905232938/Ru9WKAvS5FwrPO7Z7ed-aYN3h8AelFNeqfYE4tABqCzdE1lgdaUHFUGj06gO7djyOHoO",
-        ["Auto Sending"] = true,
-        ["Category"] = {"Secret"},
 
-        ["Link Webhook Quest Complete"] = "https://discord.com/api/webhooks/1474823473397502104/h9G6IWGbGNGDjwppXGCZDec97FgUJei58L0qw_ZgQE8tcqDJ25KxHa5J18AP0yWJMQ1O",
+    ["Enchant"] = {
+        ["Auto Enchant"] = true,
+        ["Roll Enchant"] = false,
+        ["Evolved Roll Enchant"] = true,
+        ["Farm Until Enchant"] = false,
+        ["Enchant List"] = {
+            "SECRET Hunter",
+        },
+        ["Second Enchant"] = true,
+        ["Second Enchant List"] = {
+            "Perfection",
+        },
+        ["Allowed Sacrifice"] = {
+            "Ghost Shark",
+            "Cryoshade Glider",
+            "Panther Eel",
+            "Queen Crab",
+            "King Crab",
+            "Giant Squid",
+            "Blob Shark",
+            "Gladiator Shark",
+            "Elshark Gran Maja",
+            "Bone Whale",
+            "Mosasaur Shark",
+            "Great Whale",
+            "Ancient Lochness Monster",
+        },
+        ["Minimum Rod"] = "Starter Rod",
     },
 
-["Enchant"] = {
-    ["Farm Until Enchant"] = false,
-},
+    ["Bait List"] = {
+        ["Auto Buying"] = true,
+        ["Buy List"] = {
+            "Corrupt Bait",
+            "Singularity Bait",
+        },
+        ["Endgame"] = "Singularity Bait",
+    },
 
-["Fishing"] = {
-    ["Trade Timeout"] = 90, 
-},
-
+    ["Rod List"] = {
+        ["Auto Buying"] = false,
+        ["Buy List"] = {
+            "Ares Rod",
+        },
+        ["Location Rods"] = {
+            ["Sewers"] = {"Element Rod", "Ghostfinn Rod", "Starter Rod"},
+        },
+        ["Endgame"] = "Starter Rod",
+    },
 
     ["Weather"] = {
         ["Auto Buying"] = true,
@@ -115,10 +151,12 @@ _G.FishItConfig = _G.FishItConfig or {
             "Storm",
         },
     },
+
     ["Potions"] = {
         ["Auto Use"] = true,
         ["Minimum Rod"] = "Starter Rod",
     },
+
     ["Totems"] = {
         ["Auto Use"] = true,
         ["Minimum Rod"] = "Ghostfinn Rod",
@@ -127,6 +165,7 @@ _G.FishItConfig = _G.FishItConfig or {
             "Luck Totem",
         },
     },
+
     ["Event"] = {
         ["Start Farm"] = false,
         ["Minimum Rod"] = "Ghostfinn Rod",
@@ -137,52 +176,13 @@ _G.FishItConfig = _G.FishItConfig or {
             -- ["Ancient Lochness Monster"] = false,
         },
     },
-    ["Enchant"] = {
-        ["Auto Enchant"] = true,
-        ["Roll Enchant"] = false,
-        ["Evolved Roll Enchant"] = true,
-        ["Enchant List"] = {
-            "SECRET Hunter",
-        },
-        ["Second Enchant"] = true,
-        ["Allowed Sacrifice"] = {
-            "Ghost Shark",
-            "Cryoshade Glider",
-            "Panther Eel",
-            "Queen Crab",
-            "King Crab",
-            "Giant Squid",
-            "Blob Shark",
-            "Ghost Shark",
-            "Gladiator Shark",
-            "Elshark Gran Maja",
-            "Bone Whale",
-            "Mosasaur Shark",
-            "Great Whale",
-            "Ancient Lochness Monster",
-        },
-        ["Second Enchant List"] = {
-            "Perfection",
-        },
-        ["Minimum Rod"] = "Starter Rod",
-    },
-    ["Bait List"] = {
-        ["Auto Buying"] = true,
-        ["Buy List"] = {
-            "Corrupt Bait",
-            "Singularity Bait",
-        },
-        ["Endgame"] = "Singularity Bait",
-    },
-    ["Rod List"] = {
-        ["Auto Buying"] = false,
-        ["Buy List"] = {
-            "Ares Rod",
-        },
-        ["Location Rods"] = {
-            ["Sewers"] = {"Element Rod","Ghostfinn Rod","Starter Rod"},
-        },
-        ["Endgame"] = "Starter Rod",
+
+    ["WebHook"] = {
+        ["Link Webhook"] = "https://discord.com/api/webhooks/1453734171905232938/Ru9WKAvS5FwrPO7Z7ed-aYN3h8AelFNeqfYE4tABqCzdE1lgdaUHFUGj06gO7djyOHoO",
+        ["Auto Sending"] = true,
+        ["Category"] = {"Secret"},
+
+        ["Link Webhook Quest Complete"] = "https://discord.com/api/webhooks/1474823473397502104/h9G6IWGbGNGDjwppXGCZDec97FgUJei58L0qw_ZgQE8tcqDJ25KxHa5J18AP0yWJMQ1O",
     },
 
     ["ExtremeFpsBoost"] = false,
@@ -194,4 +194,3 @@ _G.FishItConfig = _G.FishItConfig or {
     ["HideGUI"] = false,
     ["EXIT_MAP_IF_DISCONNECT"] = false,
 }
-
