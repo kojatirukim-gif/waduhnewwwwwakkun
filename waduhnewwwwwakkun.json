@@ -134,12 +134,12 @@ _G.FishItConfig = _G.FishItConfig or {
     ["Rod List"] = {
         ["Auto Buying"] = false,
         ["Buy List"] = {
-            "Ares Rod",
+            "",
         },
         ["Location Rods"] = {
             ["Sewers"] = {"Element Rod", "Ghostfinn Rod", "Starter Rod"},
         },
-        ["Endgame"] = "Starter Rod",
+        ["Endgame"] = "",
     },
 
     ["Weather"] = {
